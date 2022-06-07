@@ -1,0 +1,130 @@
+body{
+
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFFF;
+  
+
+}
+.header{
+
+    border-bottom: 2px solid #F20519;
+    background-color: #000000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+
+}
+
+.acima_header{
+    display: flex;
+}
+
+.container{
+
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+}
+.container ul{
+
+    color: #808080;
+    display: flex;
+    justify-content: space-evenly;
+    width: 900px;
+    list-style: none;
+
+}
+.header .container{
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+.container ul a{
+
+    text-decoration: none;
+    color: #808080;
+    font-weight: 400;
+
+}
+.agora{
+
+    font-weight: 600;
+
+}
+.logo{
+
+    height: 60px;
+
+}
+/* TELA DE FUNDO */
+.banner{
+
+    background-image: url(../imagens/gif_tela_de_fundo.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 723px;
+    
+    }
+    .banner .container{
+       
+    align-items: center;
+
+    }
+
+    .banner h1{
+
+        color: #001136;
+        margin: auto;
+        padding: 0;
+        font-size: 50px;
+        width: 500px;
+        font-weight: 900;
+        text-align: center;
+        
+    }
+    .banner .h1 h3{
+
+        color: #001136;
+        font-size: 40px;
+        width: 280px;
+        margin: auto;
+        font-weight: 900;
+        
+
+    }
+
+    /* login */
+
+    .banner .card{
+
+        background-color: #808080;
+        height: 45%;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 30%;
+
+
+    }
+    .card{
+     
+        margin-top: 20px;
+        color: #000000;
+
+    }    
+    .botao{
+
+        border-radius: 5px;
+
+    }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+
+            <div class="acima_header">
+                <div class=""><img src="./imagens/logo3.jpg" alt="logo Projeto" class="logo"></div>
+                    <h1 class="titulo__h1">Drift King</h1>
+            </div>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container" >
+            <div class="card">
+            <h2><b> Faça seu Login</b></h2>
+    <b>Digite seu email:</b>
+    <br>
+    <input id="email" placeholder=" Digite seu email">
+    <br>
+    <b>Digite sua senha:</b>
+    <br>
+    <input id="senha" placeholder=" Digite sua senha" type="password">
+    <br>
+    <br>
+    <button class="botao" onclick="entrar()">Entrar</button>
+    <a href="cadastro.html"><button class="botao" onclick="cadastrar()">Cadastrar-Se</button></a>
+    <br>
+    <input type="checkbox">Manter Conectado:
+    <a href="recuperaçãoSenha.html" style="display: none;" id="rec">recupere sua senha</a>
+    
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+<script>
+
+    function entrar(){
+
+        var senha1 = senha.value
+        var email1 = email.value
+
+        if(senha1 != 123){
+
+            rec.style.display='block'
+
+        }
+
+    }
+
+</script>
