@@ -181,8 +181,11 @@ body{
 
 .social{
     background-color: #f5f5f5;
-    background-image: url();
+    background-image: url(../imagens/gif_tela_de_fundo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px 0;
+    margin-top: 9%;
 }
 
 .social .container{
