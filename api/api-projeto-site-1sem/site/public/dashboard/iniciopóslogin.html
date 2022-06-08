@@ -47,18 +47,18 @@
                     <img src="../imagens/lancer_evo.jpg" alt="imagem lancer_evo">
                     <h4>Lancer Evo</h4>
                     
-                    <div  class="botao-comprar"><a onclick="lancer()" href="../lancer.html">SAIBA MAIS</a> </div>
+                    <div  class="botao-comprar"><a onclick="lancer()" href="#">SAIBA MAIS</a> </div>
                 </div>
                 <div class="box">
                     <img src="../imagens/rx7.jpg" alt="imagem Rx7">
                     <h4>Rx7</h4>
-                     <div class="botao-comprar"> <a onclick="rx7()" href="../rx7.html">SAIBA MAIS</a></div>
+                     <div class="botao-comprar"> <a onclick="rx7()" href="#">SAIBA MAIS</a></div>
                 </div>
                 <div class="box">
                     <img src="../imagens/r34.jpg" alt="imagem Nissan R34">
                     <h4>Nissa Skyline R34</h4>
                     
-                    <div class="botao-comprar"> <a onclick="r34()" href="../r34.html">SAIBA MAIS</a></div>
+                    <div class="botao-comprar"> <a onclick="r34()" href="#">SAIBA MAIS</a></div>
                 </div>
             </div>
 
@@ -152,44 +152,42 @@
 
 <script>
 
-    function clique_tenis() {
-        var carros = Number(input_carros.value);
+    // function clique_tenis() {
+    //     var carros = Number(input_carros.value);
 
-        if (carros == "") {
-            alert("Digite um valor.");
-        } else 
+    //     if (carros == "") {
+    //         alert("Digite um valor.");
+    //     } else 
 
-        if (carros == 0) {
-            div_mensagem.innerHTML = "Que pena... Estude e trabalhe bastante para começar sua coleção!";
+    //     if (carros == 0) {
+    //         div_mensagem.innerHTML = "Que pena... Estude e trabalhe bastante para começar sua coleção!";
             
              
-        } if (carros >= 1 && carros <= 5) {
-                div_mensagem.innerHTML = "Que legal! Sua coleção está aumentando...";
-                div_mensagem.style.color = "#0000FF";
-                div_mensagem.style.fontWeight = "bold";
-            }
+    //     } if (carros >= 1 && carros <= 5) {
+    //             div_mensagem.innerHTML = "Que legal! Sua coleção está aumentando...";
+    //             div_mensagem.style.color = "#0000FF";
+    //             div_mensagem.style.fontWeight = "bold";
+    //         }
 
-            if(carros >= 5) {
-            div_mensagem.innerHTML = "Impressionante! Que grande sua coleção. Parabéns!";
-            div_mensagem.style.color = "#0000FF";
-            div_mensagem.style.fontWeight = "bold";
-        }
-    }
+    //         if(carros >= 5) {
+    //         div_mensagem.innerHTML = "Impressionante! Que grande sua coleção. Parabéns!";
+    //         div_mensagem.style.color = "#0000FF";
+    //         div_mensagem.style.fontWeight = "bold";
+    //     }
+    // }
    
 
         // FUNÇÃO PRA SOMAR OS CLIQUES
     function lancer() {
         var idUsuario = sessionStorage.ID_USUARIO;
-        
-        var fkCarro = 1;
-    
-        fetch("/medidas/tempo-real", {
+    var fkCarro = 1;
+    fetch("/medidas/tempo-real", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                fkCarro,
+                fkcarro:fkcarro,
                 fkUser:idUsuario            
                 
             })
@@ -198,7 +196,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Lancer Evo resgatado com sucesso!");                
+                window.alert("Astralis, votação efetuada!");                
                 // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
@@ -220,7 +218,7 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                fkCarro,
+                fkcarro:fkcarro,
                 fkUser:idUsuario            
                 
             })
@@ -240,7 +238,7 @@
         });
     }
 
-    function airjordan() {
+    function r34() {
         var idUsuario = sessionStorage.ID_USUARIO;
         
         var fkCarro = 3;
@@ -251,7 +249,7 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                fkCarro,
+                fkcarro:fkcarro,
                 fkUser:idUsuario            
                 
             })
@@ -371,7 +369,7 @@
                     datasets: [ // datasets (conjunto de dados)
                         {
                             label: ["Carros mais votados!"], // irá conter o rótulo principal do nosso gráfico
-                            data: ["5", "3", "6"], // os dados referentes aqueles rótulos
+                            data:{}, // os dados referentes aqueles rótulos
                             backgroundColor: ["rgb(0, 162, 255)", "rgb(3, 111, 255)", "rgb(0, 0, 255)"], // cor das "bolinhas" do gráfico
                             borderColor: "red", // cor da "linha" do gráfico
                             hoverBackgroundColor: ["rgb(115, 59, 48)", "rgb(0, 0, 211)", "rgb(255, 162, 111)"],
@@ -419,34 +417,53 @@
         console.log(erro);
     })
         
-    
-
+</script>
+    <!-- <script>
     // CHARTJS    
 
-    // const visitados = {
-    //     type: "bar",
-    //     data: {
-    //         labels: ["lancerEvo", "rx795", "AirJordan1", "Yeezy700", "Yeezy350", "AirForce1Low"],
-    //         datasets: [
-    //             {
-    //                 label: "carros mais Visitados",
-    //                 data: [likes],
-    //                 backgroundColor: ["rgb(0, 162, 255)", "rgb(0, 255, 128)", "rgb(226, 223, 55)", "rgb(141, 106, 197)", "rgb(194, 40, 40)", "rgb(0, 85, 121)"],
-    //                 borderColor: "black",
-    //                 hoverBackgroundColor: "rgb(115, 59, 48)",
-    //                 fontWeight: "bold"
+    var nomecarros = []
+  fetch("/analytics/analytics")
+    .then(function (res) {
+        console.log(res)
+        res.json().then(function (json) {
+            console.log(json);
+            var likes = []
+            for (let index = 0; index < json.length; index++) {
+                nomeTimes.push(json[index].Votos);
                 
-    //             }
-    //         ]
-    //     },
-    //     options: {
-    //         maintainAspectRatio: false
-    //     }
-    // }
+                // votos.push(json[index].likes)
+            }
+
+            console.log(nomeTimes);
+    const visitados = {
+        type: "bar",
+        data: {
+            labels: ["lancerEvo", "rx795", "AirJordan1", "Yeezy700", "Yeezy350", "AirForce1Low"],
+            datasets: [
+                {
+                    label: "carros mais Visitados",
+                    data: nomecarros,
+                    backgroundColor: ["rgb(0, 162, 255)", "rgb(0, 255, 128)", "rgb(226, 223, 55)", "rgb(141, 106, 197)", "rgb(194, 40, 40)", "rgb(0, 85, 121)"],
+                    borderColor: "black",
+                    hoverBackgroundColor: "rgb(115, 59, 48)",
+                    fontWeight: "bold"
+                
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: false
+        }
+    }
 
    
 
-    // var mais_visitados = new Chart(document.getElementById ("visitados"), visitados);
+    var mais_visitados = new Chart(document.getElementById ("visitados"), visitados);
 
+})
+    }).catch(function (erro) {
+        console.log(erro);
+    })
 </script>
+ -->
 
