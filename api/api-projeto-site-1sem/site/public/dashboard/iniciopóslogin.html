@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analytics</title>
+    <link rel="stylesheet" href="iniciopóslogin.css">
+    <link rel="icon" href="imagens/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+    <div class="header">
+        <div class="container">
+
+            <div class="acima_header">
+                <div class=""><img src="../imagens/logo3.jpg" alt="logo Projeto" class="logo"></div>
+                    <h1 class="titulo__h1">Drift King</h1>
+            </div>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../sobre_nos.html">Sobre Nós</a></li>
+                    <li><a href="../login.html">Login</a></li>
+                    <li><a href="../cadastro.html">Cadastro</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <!-- banner com a imagem de fundo setada no css -->
+    <!-- <div class="banner">
+        <div class="container">
+            <p>
+                ANDE COMO SE TIVESSE <br> ENTRE AS NUVENS
+            </p>
+        </div>
+    </div> -->
+
+    <div class="social">
+        <div class="container">
+            <div class="titulo">
+                <h2 id="textcolor">FIQUE POR DENTRO <br> DOS  NOVOS DROPS</h2>
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <img src="../imagens/lancer_evo.jpg" alt="imagem lancer_evo">
+                    <h4>Lancer Evo</h4>
+                    
+                    <div  class="botao-comprar"><a onclick="lancer()" href="../lancer.html">SAIBA MAIS</a> </div>
+                </div>
+                <div class="box">
+                    <img src="../imagens/rx7.jpg" alt="imagem Rx7">
+                    <h4>Rx7</h4>
+                     <div class="botao-comprar"> <a onclick="rx7()" href="../rx7.html">SAIBA MAIS</a></div>
+                </div>
+                <div class="box">
+                    <img src="../imagens/r34.jpg" alt="imagem Nissan R34">
+                    <h4>Nissa Skyline R34</h4>
+                    
+                    <div class="botao-comprar"> <a onclick="r34()" href="../r34.html">SAIBA MAIS</a></div>
+                </div>
+            </div>
+
+            <!-- <div class="boxes">
+                <div style="margin-top: 40px;" class="box">
+                    <img src="assets/imgs/yeezy700.webp" alt="imagem lancerEVO">
+                    <h4>YEEZY 700 <br> WAVE RUNNER</h4>
+                    
+                    <div class="botao-comprar"> <a onclick="yeezy700()" href="yeezy700.html">SAIBA MAIS</a></div>
+                </div>
+                <div style="margin-top: -50px;" class="box">
+                    <img src="assets/imgs/yeezy.png" alt="imagem nike95">
+                    <h4>YEEZY 350 BELUGA</h4>
+                    
+                    <div class="botao-comprar"> <a onclick="yeezy350()" href="yeezy350.html">SAIBA MAIS</a></div>
+                </div>
+                <div style="margin-top: 40px;" class="box">
+                    <img src="assets/imgs/cactusjackindex.png" alt="imagem jordan1low">
+                    <h4>Air Force 1 Low <br>
+                        Travis Scott Cactus Jack </h4>
+                    
+                    <div class="botao-comprar"> <a onclick="cactusjack()" href="cactusjack.html">SAIBA MAIS</a></div>
+                </div>
+            </div> -->
+
+            
+
+            <!-- INFO Sneakerheads -->
+            <!-- <br> <br> <br> <br> <br> <br>
+            <h1 class="cultura-sneaker">A Cultura <span id="textcolor">Sneakerheads</span></h1> 
+            <div class="container-jordan11">
+                <div class="container-text">
+                <br> <br> <br>
+                <h4>
+                    O termo sneakerheads é usado para se referir aos adeptos da cultura urbana sneaker, “do inglês tênis”. A maioria dessas pessoas são jovens do sexo masculino que têm uma grande admiração por tênis. Mas não qualquer tênis, eles têm que contar uma história e representar um tipo de personalidade específica. <br> <br>
+                    Alguns são colecionadores de tênis e outros são artistas que personalizam as suas peças. Os sneakerheads são aficionados por aqueles modelos de tênis com pouca tiragem, que são praticamente exclusivos. Isso porque, quanto mais raros, mais valiosos eles são. <br> <br>
+                 
+                </h4>
+                </div>
+                <div class="img-jordan">
+                    <img src="assets/imgs/ryan-plomp--aCtb_RTwuM-unsplash.jpg" alt="">
+                </div>
+            </div>
+            <br><br><br><br> -->
+
+            <!-- CHART JS -->
+
+            <h1 class="text-chart">Veja os carros mais  Visitados <br>
+            no <span>Drift King!</span></h1>
+
+            <div class="graph">
+                <canvas id="visitados" style="width: 100%; height: 100%;"></canvas>
+            </div>
+            <br> <br> <br> <br>
+            <!-- SIMULADOR SNEAKERHEADS -->
+            <!-- <h1 class="titulo-simulador">Você é um Sneakerhead?
+                
+            </h1> <br> 
+            <div class="container-simulador">
+                <div class="img-simulador">
+                    <img src="assets/imgs/solesavy-2tfHt0sfv3w-unsplash.jpg">
+                </div>
+                <div class="simulador1">
+                    <P>Simule Aqui: <br>
+                        Quantos carros colecionáveis você tem?</P> <input type="text" id="input_carros"> <br> <br>
+                    <button class="botao-simulador" onclick="clique_tenis()">SIMULAR</button> 
+                    <div id="div_mensagem"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <!-- <div class="footer">
+        <div class="container">
+            <h4>
+                <a href="../html/index.html">Home</a> -
+                <a href="../html/login.html">Login</a> -
+                <a href="../html/cadastro.html">Cadastro</a>
+                <br> <br>
+                <span id="span_termos"> Termos de uso </span> <br>
+                <span style="margin-left: 5px;" id="span_politica"> Política de Privacidade </span> <br>
+                <span style="margin-left: 15px; color: grey;"  class="span-mota"> MOTA DROP, © 2021 </span>
+            </h4>
+        </div>
+    </div> -->
+<span style="color: #0000ff; font-weight: bold;"></span>
+
+</body>
+</html>
+
+<script>
+
+    function clique_tenis() {
+        var carros = Number(input_carros.value);
+
+        if (carros == "") {
+            alert("Digite um valor.");
+        } else 
+
+        if (carros == 0) {
+            div_mensagem.innerHTML = "Que pena... Estude e trabalhe bastante para começar sua coleção!";
+            
+             
+        } if (carros >= 1 && carros <= 5) {
+                div_mensagem.innerHTML = "Que legal! Sua coleção está aumentando...";
+                div_mensagem.style.color = "#0000FF";
+                div_mensagem.style.fontWeight = "bold";
+            }
+
+            if(carros >= 5) {
+            div_mensagem.innerHTML = "Impressionante! Que grande sua coleção. Parabéns!";
+            div_mensagem.style.color = "#0000FF";
+            div_mensagem.style.fontWeight = "bold";
+        }
+    }
+   
+
+        // FUNÇÃO PRA SOMAR OS CLIQUES
+    function lancer() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+        
+        var fkCarro = 1;
+    
+        fetch("/medidas/tempo-real", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkCarro,
+                fkUser:idUsuario            
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Lancer Evo resgatado com sucesso!");                
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+    }
+
+    function rx7() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+        
+        var fkCarro = 2;
+    
+        fetch("/medidas/tempo-real", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkCarro,
+                fkUser:idUsuario            
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Rx7 resgatado com sucesso!");                
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+    }
+
+    function airjordan() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+        
+        var fkCarro = 3;
+    
+        fetch("/medidas/tempo-real", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkCarro,
+                fkUser:idUsuario            
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Nissan R34 resgatado com sucesso!");                
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+    }
+
+    // function yeezy700() {
+    //     var idUsuario = sessionStorage.ID_USUARIO;
+        
+    //     var fkCarro = 4;
+    
+    //     fetch("/medidas/tempo-real", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             fkCarro,
+    //             fkUser:idUsuario            
+                
+    //         })
+    //     }).then(function (resposta) {
+
+    //         console.log("resposta: ", resposta);
+
+    //         if (resposta.ok) {
+    //             window.alert("Yeezy 700 resgatado com sucesso!");                
+    //             // finalizarAguardar();
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar o cadastro!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //         // finalizarAguardar();
+    //     });
+    // }
+
+    // function yeezy350() {
+    //     var idUsuario = sessionStorage.ID_USUARIO;
+
+    //     var fkCarro = 5;
+    
+    //     fetch("/medidas/tempo-real", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             fkCarro,
+    //             fkUser:idUsuario             
+                
+    //         })
+    //     }).then(function (resposta) {
+
+    //         console.log("resposta: ", resposta);
+
+    //         if (resposta.ok) {
+    //             window.alert("Yeezy 350 resgatado com sucesso!");                
+    //             // finalizarAguardar();
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar o cadastro!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //         // finalizarAguardar();
+    //     });
+    // }
+
+    // function cactusjack() {
+    //     var idUsuario = sessionStorage.ID_USUARIO;
+
+    //     var fkCarro = 6;
+    
+    //     fetch("/medidas/tempo-real", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             fkCarro,
+    //             fkUser:idUsuario            
+                
+    //         })
+    //     }).then(function (resposta) {
+
+    //         console.log("resposta: ", resposta);
+
+    //         if (resposta.ok) {
+    //             window.alert("Nissan R34 resgatado com sucesso!");                
+    //             // finalizarAguardar();
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar o cadastro!");
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //         // finalizarAguardar();
+    //     });
+    // }
+
+    const visitados = {
+                type: "bar", // tipo do gráfico
+                data: { // objeto que vai conter os dados do gráfico
+                    labels: ["Lancer Evo", "Rx7", "Nissan R34"], // labels (rótulos) que serão identificados os nossos dados 
+                    datasets: [ // datasets (conjunto de dados)
+                        {
+                            label: ["Carros mais votados!"], // irá conter o rótulo principal do nosso gráfico
+                            data: ["5", "3", "6"], // os dados referentes aqueles rótulos
+                            backgroundColor: ["rgb(0, 162, 255)", "rgb(3, 111, 255)", "rgb(0, 0, 255)"], // cor das "bolinhas" do gráfico
+                            borderColor: "red", // cor da "linha" do gráfico
+                            hoverBackgroundColor: ["rgb(115, 59, 48)", "rgb(0, 0, 211)", "rgb(255, 162, 111)"],
+                            fontWeight: "bold"
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false
+                    /* maintainAspectRatio (manter relação de aspecto) 
+                      caso true: ele "obdece" a altura e largura que colocamos
+                      caso false: ele não "obdece" a altura e largura que colocamos e se ajusta ao componente pai
+                    */
+                }
+            }
+
+            var mais_visitados = new Chart(document.getElementById ("visitados"), visitados);
+            /* aqui obrigatoriamente tem que colocar new Chart() para criar um novo chart 
+            e passar dentro dos (parênteses) o elemento canvas que você quer mandar e 
+            separado pela virgula o que você quer mandar, no nosso caso a config que fizemos 
+            */
+    var nomeCarro = []
+    fetch("/analytics/analytics")
+    .then(function (res) {
+        res.json().then(function (json) {
+            console.log(json);
+            var likes = []
+            for (let index = 0; index < json.length; index++) {
+                nomeCarro.push(json[index].Votos);
+                
+                // votos.push(json[index].likes)
+            }
+
+            console.log(nomeCarro);
+
+            // Inicia uma variável do tipo constante (não pode ser reatribuida)
+        }
+
+
+
+
+
+        )
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+        
+    
+
+    // CHARTJS    
+
+    // const visitados = {
+    //     type: "bar",
+    //     data: {
+    //         labels: ["lancerEvo", "rx795", "AirJordan1", "Yeezy700", "Yeezy350", "AirForce1Low"],
+    //         datasets: [
+    //             {
+    //                 label: "carros mais Visitados",
+    //                 data: [likes],
+    //                 backgroundColor: ["rgb(0, 162, 255)", "rgb(0, 255, 128)", "rgb(226, 223, 55)", "rgb(141, 106, 197)", "rgb(194, 40, 40)", "rgb(0, 85, 121)"],
+    //                 borderColor: "black",
+    //                 hoverBackgroundColor: "rgb(115, 59, 48)",
+    //                 fontWeight: "bold"
+                
+    //             }
+    //         ]
+    //     },
+    //     options: {
+    //         maintainAspectRatio: false
+    //     }
+    // }
+
+   
+
+    // var mais_visitados = new Chart(document.getElementById ("visitados"), visitados);
+
+</script>
+

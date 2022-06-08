@@ -1,0 +1,419 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+/* PARTE DE CIMA DO SITE (HEADER) 
+
+.header {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    /* depois de setar o display: flex, usamos o justify-content para justificar na horizontal e o space-between para dar espaços entre eles (between) 
+    justify-content: space-between;
+}
+
+.navbar {
+    /* setar estilo da lista para "sem estilo". 
+    list-style: none;
+    display: flex;
+    width: 600px;
+    /* depois de setar o display: flex, usar o space-evenly para espaços uniformemente (evenly)
+    justify-content: space-evenly
+    /* alinhar componentes verticalmente (quando o display for flex sem alteração de "sentido" 
+    align-items: center;
+    color: whitesmoke;
+}
+
+.navbar a {
+    color: whitesmoke;
+    /* usamos o text-decoration para tirar o sublinhado das letras que forem da tag a (uma linkagem) 
+    text-decoration: none;
+}
+
+.agora {
+    font-weight: 700;
+}*/
+
+/* Banner */
+
+body{
+
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFFF;
+  
+
+}
+.header{
+
+    border-bottom: 2px solid #F20519;
+    background-color: #000000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.acima_header{
+    display: flex;
+}
+
+.container{
+
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+}
+.container ul{
+
+    color: #808080;
+    display: flex;
+    justify-content: space-evenly;
+    width: 900px;
+    list-style: none;
+
+}
+.header .container{
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+.container ul a{
+
+    text-decoration: none;
+    color: #808080;
+    font-weight: 400;
+
+}
+.agora{
+
+    font-weight: 600;
+
+}
+.logo{
+
+    height: 60px;
+
+}
+
+/* TELA DE FUNDO */
+.banner{
+
+    background-image: url(../imagens/gif_tela_de_fundo.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 723px;
+    margin-top: auto;
+    
+    }
+    .banner .container{
+
+    height: 400px;
+    align-items: center;
+
+    }
+
+.header .container{
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+.container ul a{
+
+    text-decoration: none;
+    color: #808080;
+    font-weight: 400;
+
+}
+.agora{
+
+    font-weight: 600;
+
+}
+.logo{
+
+    height: 60px;
+
+}
+
+.banner{
+    height: 100%;
+    width: 100%;
+    color: #f5f5f5;
+    /* setar fundo da div com a imagem ou url especificada */
+    background-image: url("../assets/imgs/nike-2016-allstar-shoes-wallpaper/imagem\ sem\ a\ logo\ preta_00000.png");
+    
+    /* imagem ocupar todo o espaços disponivel se ajustando */
+    background-size: cover;
+}
+
+.banner .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner p{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 350px;
+    margin-bottom: 600px;
+    font-weight: bold;
+}
+
+/* MEIO DO SITE (SOCIAL) */
+
+.social{
+    background-color: #f5f5f5;
+    background-image: url();
+    padding: 50px 0;
+}
+
+.social .container{
+    display: flex;
+    /* flex-direction usado para alterar orientação do display: flex, ao invés de row vira column */
+    flex-direction: column;
+    /* com flex-direction: column, o justify-content fica em orientação vertical */
+    justify-content: space-evenly;
+}
+
+.social .titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.social h2{
+    display: flex;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    /* usamos o align-self para orientar o próprio componente, ou seja, o componente que o compõem */
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+.social .boxes{
+    display: flex;
+}
+
+.boxes{
+    float: inline-end;
+    margin-bottom: 95px;
+}
+
+.social .box{
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    /* o flex-wrap serve justamente para itens flexíveis serem forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas  */
+    flex-wrap: wrap;
+    text-align: center;
+    width: 33%;
+}
+.box{
+    transition: transform 0.6s ease-out;  
+    transition: box-shadow 0.2s ease-in-out;
+    filter: grayscale(100%);
+    
+    
+       
+}
+
+.box:hover{
+    transition: filter 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    filter: grayscale(0%);
+    transform: scale(1.3); 
+}
+
+.social .box img{
+    width: 150px;
+    align-self: center;
+    border-radius: 35px;
+}
+
+.social .box h4{
+    color: black;
+    margin-top: 30px;
+}
+
+.social .box .botao-comprar {
+    color: white;
+    align-items: center;
+    background-color: black;
+    width: 30%;
+    height: 8%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-left: 125px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.botao-comprar{
+    padding: 5px;
+    
+}
+
+/* ASSUNTO JORDAN 11 */
+
+.cultura-sneaker{
+    margin: auto;
+}
+
+#textcolor{
+    color: red;
+}
+
+.container-text {          
+    /* border-radius: 80px; */
+    display: flex;    
+    float: left;
+    width: 35%;
+    font-size: 20px;
+    margin-top: -100px;
+    margin-left: 55px;
+    text-align: center;
+}
+
+.container-text h4{
+    margin-top: 150px;
+}
+
+
+
+.img-jordan img{
+    float: right;
+    width: 35%;
+    height: 30%;
+    display: flex;
+    margin-top: 60px;
+    border-radius: 30px;
+    border: black 2px solid;    
+}
+
+
+/* CHART JS */
+
+.text-chart{
+    text-align: center;
+}
+
+
+
+.graph{
+    background-color: #fafafa;
+    display: inline-block;
+    width: 45%;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 420px;
+    align-items: center;
+    
+}
+
+/*
+
+SIMULADOR 1
+.titulo-simulador{
+    margin: auto;
+}
+
+
+
+.titulo-simulador h1 {
+    float: right;
+}
+
+.img-simulador img {
+    float: left;
+    width: 35%;
+    display: flex;
+    border: black 2px solid;
+    border-radius: 30px;
+}
+
+.simulador1{
+    float: right;
+    margin-right: 150px;
+}
+
+.simulador1 input{
+    width: 250px;
+    height: 25px;
+    background-color: rgba(196, 196, 196, 0.3);
+    border-color: rgba(196, 196, 196, 0.3);
+}
+
+.botao-simulador{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 45px;
+    font-weight: 800;
+    border-radius: 30px;
+    
+}
+
+.botao-simulador:hover{
+    background-color: #005579;
+    
+    
+}
+
+
+
+
+/* FOOTER 
+
+.footer{
+    margin-top: 285px;
+}
+
+.footer .container {
+    width: 100%;
+    height: 150px;    
+    background-color: #005579;
+    margin-top: 550px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer .container h4{
+    margin-left: 600px;
+}
+
+.footer .container span{
+    margin-left: 40px;
+    color: white;
+}*/
+
+
+

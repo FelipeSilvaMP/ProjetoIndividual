@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lancer</title>
+    <link rel="stylesheet" href="css/lancer.css">
+    <link rel="icon" href="imagens/logo.png">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+
+            <div class="acima_header">
+                <div class=""><img src="./imagens/logo3.jpg" alt="logo Projeto" class="logo"></div>
+                    <h1 class="titulo__h1">Drift King</h1>
+            </div>
+                <ul>
+                    <li><a href="index.html" class="agora">Inicio</a></li>
+                    <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    
+                </ul>
+        </div>
+    </div>
+    <div class="banner">
+
+        <div class="container">
+            <div class="carro">
+                <img src="./imagens/lancer_evo.jpg" alt="lancer_evo" class="imagem">
+                    <h3>
+                        Lancer Evo 
+                    </h3>
+            </div>
+            <div class="simulador">
+
+                    <h2>
+
+                        qual é a velocidade maxima desse carro ?
+                        <input type="text" id="ipt_velocidade">
+                        <button onclick="btn_testar()">Testar</button>
+                        <div id="div_msg"></div>
+
+                    </h2>
+
+            </div>
+        </div>
+
+</div>
+</body>
+</html>
+<script>
+
+    function btn_testar(){
+
+        if(ipt_velocidade.value != 300){
+
+            div_msg.innerHTML = `Que pena voce errou por pouco faltou ${300 - ipt_velocidade.value} para atingir a velocidade correta de 300KM por hora`
+
+        }else{
+
+            div_msg.innerHTML = `Parabens acertou em cheio 300KM por hora`
+
+        }
+
+    }
+
+</script>
